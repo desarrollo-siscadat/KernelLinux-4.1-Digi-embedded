@@ -26,7 +26,7 @@
 /* ECSPI3 */
 &ecspi3 {
 	fsl,spi-num-chipselects = <3>;
-	cs-gpios = <&gpio1 10 GPIO_ACTIVE_LOW>, <&gpio1 12 GPIO_ACTIVE_LOW>, <&gpio1 20 GPIO_ACTIVE_LOW>;
+	cs-gpios = <&gpio1 20 GPIO_ACTIVE_LOW>, <&gpio1 12 GPIO_ACTIVE_LOW>, <&gpio1 10 GPIO_ACTIVE_LOW>;
 	pinctrl-names = "default";
 	pinctrl-0 = <&pinctrl_ecspi3_master>;
 	status = "disabled";
@@ -85,6 +85,10 @@
 		interrupt-parent = <&gpio1>;
 		interrupts = <3 IRQ_TYPE_EDGE_RISING>;
 		irq-gpios = <&gpio1 3 GPIO_ACTIVE_HIGH>;
+		touchscreen-size-x = <800>;
+              	touchscreen-size-y = <480>;
+              	touchscreen-inverted-x;
+              	touchscreen-inverted-y;
 		skip-firmware-request;
 		reload-fw-on-resume;
 		status = "disabled";
@@ -98,6 +102,10 @@
 		interrupt-parent = <&gpio1>;
 		interrupts = <3 IRQ_TYPE_EDGE_RISING>;
 		irq-gpios = <&gpio1 3 GPIO_ACTIVE_HIGH>;
+		touchscreen-size-x = <800>;
+              	touchscreen-size-y = <480>;
+              	touchscreen-inverted-x;
+              	touchscreen-inverted-y;
 		skip-firmware-request;
 		reload-fw-on-resume;
 		status = "disabled";
