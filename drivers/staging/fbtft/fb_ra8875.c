@@ -171,7 +171,7 @@ static int init_display(struct fbtft_par *par)
 	/* Display ON */
 	write_reg(par, 0x01, 0x80);
 	mdelay(10);
-
+	write_reg(par, 0x20, 0x04);
 	return 0;
 }
 
