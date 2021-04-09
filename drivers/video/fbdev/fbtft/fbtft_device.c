@@ -335,8 +335,10 @@ static struct fbtft_device_display displays[] = {
 		.name = "er_tftm050_2",
 		.spi = &(struct spi_board_info) {
 			.modalias = "fb_ra8875",
-			.max_speed_hz = 5000000,
-			.mode = SPI_MODE_3,
+			.max_speed_hz = 50000000,
+			.bus_num=2,
+			.chip_select=1,
+			.mode = SPI_MODE_0,
 			.platform_data = &(struct fbtft_platform_data) {
 				.display = {
 					.buswidth = 8,
@@ -346,9 +348,10 @@ static struct fbtft_device_display displays[] = {
 				},
 				.bgr = true,
 				.gpios = (const struct fbtft_gpio []) {
-					{ "reset", 25 },
-					{ "dc", 24 },
-					{},
+					{ "reset", 40 },
+					{ "dc", 66 },
+					{ "led", 15 },
+					{ "cs", 20 },
 				},
 			}
 		}
