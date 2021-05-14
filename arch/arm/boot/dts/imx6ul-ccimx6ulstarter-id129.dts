@@ -20,7 +20,7 @@
 #include "imx6ul-ccimx6ulstarter.dtsi"
 
 &mca_adc {
-	digi,adc-ch-list = <4>;
+	digi,adc-ch-list = <2 4>;
 	digi,adc-vref = <3000000>;
 };
 
