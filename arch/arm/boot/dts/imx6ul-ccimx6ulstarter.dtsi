@@ -4,7 +4,7 @@
  * The code contained herein is licensed under the GNU General Public
  * License. You may obtain a copy of the GNU General Public License
  * Version 2 or later at the following locations:
- *
+ *<0 4 8 16 32 64 128 255>
  * http://www.opensource.org/licenses/gpl-license.html
  * http://www.gnu.org/copyleft/gpl.html
  */
@@ -17,7 +17,7 @@
 	lcd_backlight: backlight {
 		compatible = "pwm-backlight";
 		pwms = <&pwm8 0 50000>;
-		brightness-levels = <0 4 8 16 32 64 128 255>;
+		brightness-levels = <0 1 2 4 8 64 128 255>;
 		default-brightness-level = <6>;
 		status = "disabled";
 	};
